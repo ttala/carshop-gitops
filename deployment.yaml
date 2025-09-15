@@ -32,6 +32,8 @@ spec:
       containers:
         - name: web-carshop
           image: ghcr.io/ttala/carshop-api:7d4d49f2337eebbe097abc2bb3bdc8e40d77622a
+      imagePullSecrets:
+        - name: ghcr-secret
           ports:
             - containerPort: 8000
           env:
